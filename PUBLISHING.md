@@ -1,32 +1,33 @@
 # Publishing checklist
 
-How to get **OneNote Style** into Obsidian's community theme directory.
+How to release **OneNote Style** and keep it listed in Obsidian's community theme directory.
 
-## 1. Put the repository on GitHub
+The repository is https://github.com/Sundowna/obsidian-onenote-theme.
 
-Create an empty public repository named `obsidian-onenote-theme` under the `Sundowna` account (no README or license, this repo has them). Then:
+## Releases
+
+Obsidian installs the theme from the GitHub release whose tag equals `version` in `manifest.json` (no `v` in front). That release must have `manifest.json` and `theme.css` attached.
+
+To make a new release:
+
+1. Change the theme in `theme.css`.
+2. Raise `version` in `manifest.json` (for example `1.0.1`) and commit.
+3. Push and release with the GitHub CLI:
 
 ```bash
-git remote add origin https://github.com/Sundowna/obsidian-onenote-theme.git
-git push -u origin main
+git push
 ```
-
-## 2. Make the first release
-
-`version` in `manifest.json` is `1.0.0`. Push a tag with exactly that name, without a `v`:
 
 ```bash
-git tag 1.0.0
-git push origin 1.0.0
+gh release create 1.0.1 manifest.json theme.css --title 1.0.1 --generate-notes
 ```
 
-The **Release** workflow (`.github/workflows/release.yml`) creates the release with `manifest.json` and `theme.css` attached. Obsidian installs the theme from those two files.
+## Submit the theme (once)
 
-## 3. Submit the theme
-
-1. Sign in at [community.obsidian.md](https://community.obsidian.md) and link the GitHub account.
-2. Choose **Add your theme** and give the repository `Sundowna/obsidian-onenote-theme`.
-3. The review is automatic. If it reports problems, fix them and make a new release (step 4).
+1. Add `screenshot.png` (512 × 288) to the repository root and push it.
+2. Sign in at [community.obsidian.md](https://community.obsidian.md) and link the GitHub account.
+3. Choose **Add your theme** and give the repository `Sundowna/obsidian-onenote-theme`.
+4. The review is automatic. If it reports problems, fix them and make a new release.
 
 For the older pull-request route, this is the entry for `community-css-themes.json` in `obsidianmd/obsidian-releases`:
 
@@ -39,12 +40,6 @@ For the older pull-request route, this is the entry for `community-css-themes.js
   "modes": ["dark", "light"]
 }
 ```
-
-## 4. Later releases
-
-1. Change the theme in `theme.css`.
-2. Raise `version` in `manifest.json` (for example `1.0.1`) and commit.
-3. Tag and push: `git tag 1.0.1` then `git push origin main 1.0.1`.
 
 ## Rules the directory checks
 
