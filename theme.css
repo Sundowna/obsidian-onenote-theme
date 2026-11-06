@@ -1,0 +1,308 @@
+/* ==========================================================================
+   OneNote Style - an Obsidian theme with the look of Microsoft OneNote
+   https://github.com/Sundowna/obsidian-onenote-theme
+
+   Purple title row, white pages, light grey panes, Calibri text and
+   OneNote's blue heading styles. Light and dark modes.
+
+   Everything is driven by CSS variables. To retune a colour, override the
+   variable in a CSS snippet, for example:
+     .theme-light { --one-chrome: #2b579a; }
+
+   OneNote is a trademark of Microsoft. This theme is not made by or
+   affiliated with Microsoft.
+   ========================================================================== */
+
+/* @settings
+name: OneNote Style
+id: onenote-style-theme
+settings:
+  -
+    id: onenote-chrome
+    title: Title row and icon strip
+    description: Colour of the tab row along the top and the icon strip on the left
+    type: class-select
+    allowEmpty: false
+    default: onenote-chrome-purple
+    options:
+      -
+        label: Purple (OneNote)
+        value: onenote-chrome-purple
+      -
+        label: Slate grey (OneNote for Windows)
+        value: onenote-chrome-slate
+      -
+        label: Neutral grey
+        value: onenote-chrome-neutral
+  -
+    id: onenote-grey-panes
+    title: Grey side panes
+    description: Mid-grey sidebars like OneNote for Windows (light mode)
+    type: class-toggle
+  -
+    id: onenote-plain-headings
+    title: Plain headings
+    description: Headings in the normal text colour instead of OneNote's blue heading styles
+    type: class-toggle
+  -
+    id: onenote-obsidian-fonts
+    title: Use Obsidian's fonts
+    description: Don't use Calibri and Segoe UI. Your own font choices under Appearance always win either way.
+    type: class-toggle
+*/
+
+/* ---------- Shared: fonts, sizes, shapes ---------- */
+
+body {
+  /* OneNote purple #7719AA. Your accent colour under Appearance still wins. */
+  --accent-h: 279;
+  --accent-s: 74%;
+  --accent-l: 38%;
+
+  --font-text-theme: "Calibri", "Carlito";
+  --font-interface-theme: "Segoe UI", "Segoe UI Variable Text";
+  --font-monospace-theme: "Consolas", "Cascadia Mono";
+  --one-light-font: "Calibri Light", "Calibri", "Carlito", var(--font-text);
+
+  /* Page title: Calibri Light with a thin rule under it, like a OneNote page */
+  --inline-title-font: var(--one-light-font);
+  --inline-title-size: 1.8em;
+  --inline-title-weight: 400;
+  --inline-title-line-height: 1.25;
+
+  /* OneNote's built-in heading styles (Calibri 11pt body text) */
+  --h1-font: var(--one-light-font);
+  --h1-size: 1.45em;
+  --h1-weight: 400;
+  --h2-font: var(--one-light-font);
+  --h2-size: 1.23em;
+  --h2-weight: 400;
+  --h3-size: 1.09em;
+  --h3-weight: 700;
+  --h4-size: 1.09em;
+  --h4-weight: 400;
+  --h4-style: italic;
+  --h5-size: 1em;
+  --h5-weight: 700;
+  --h6-size: 1em;
+  --h6-weight: 700;
+  --h6-style: italic;
+
+  --checkbox-radius: 2px;
+  --table-header-weight: 600;
+  --blockquote-font-style: italic;
+  --blockquote-border-thickness: 3px;
+  --nav-item-weight-active: 600;
+}
+
+body.onenote-obsidian-fonts {
+  --font-text-theme: initial;
+  --font-interface-theme: initial;
+  --font-monospace-theme: initial;
+  --one-light-font: var(--font-text);
+}
+
+/* ---------- Light mode ---------- */
+
+.theme-light {
+  --one-chrome: #7719AA;
+  --one-chrome-text: #ffffff;
+  --one-chrome-muted: rgba(255, 255, 255, 0.82);
+  --one-chrome-hover: rgba(255, 255, 255, 0.16);
+  --one-page-hover: rgba(0, 0, 0, 0.06);
+
+  --background-primary: #ffffff;
+  --background-primary-alt: #faf9f8;
+  --background-secondary: #f3f2f1;
+  --background-secondary-alt: #edebe9;
+  --background-modifier-border: #e1dfdd;
+  --background-modifier-border-hover: #c8c6c4;
+  --background-modifier-border-focus: #a19f9d;
+
+  --text-normal: #201f1e;
+  --text-muted: #605e5c;
+  --text-faint: #a19f9d;
+  --text-selection: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --text-highlight-bg: rgba(255, 241, 0, 0.75);
+
+  --link-color: #0563c1;
+  --link-color-hover: #034a91;
+  --link-external-color: #0563c1;
+  --link-external-color-hover: #034a91;
+
+  --h1-color: #1e4e79;
+  --h2-color: #2e75b5;
+  --h3-color: #1f3864;
+  --h4-color: #2e75b5;
+  --h5-color: #2e75b5;
+  --h6-color: #2e75b5;
+
+  --blockquote-color: #595959;
+  --blockquote-border-color: #c8c6c4;
+  --code-background: #f3f2f1;
+  --table-border-color: #a19f9d;
+  --hr-color: #c8c6c4;
+  --list-marker-color: var(--text-normal);
+}
+
+/* ---------- Dark mode ---------- */
+
+.theme-dark {
+  --one-chrome: #461865;
+  --one-chrome-text: #ffffff;
+  --one-chrome-muted: rgba(255, 255, 255, 0.78);
+  --one-chrome-hover: rgba(255, 255, 255, 0.14);
+  --one-page-hover: rgba(255, 255, 255, 0.07);
+
+  /* The purple is too dark to read on black, so text uses a lighter tint */
+  --color-accent: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 30%));
+  --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 36%));
+  --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 42%));
+  --interactive-accent: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 8%));
+  --interactive-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 14%));
+
+  --background-primary: #1f1f1f;
+  --background-primary-alt: #262626;
+  --background-secondary: #2b2b2b;
+  --background-secondary-alt: #333333;
+  --background-modifier-border: #3b3a39;
+  --background-modifier-border-hover: #4d4b49;
+  --background-modifier-border-focus: #6b6967;
+
+  --text-normal: #f3f2f1;
+  --text-muted: #c8c6c4;
+  --text-faint: #8a8886;
+  --text-selection: hsla(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 25%), 0.3);
+  --text-highlight-bg: rgba(214, 190, 0, 0.4);
+
+  --link-color: #6cb4f5;
+  --link-color-hover: #9ccbf8;
+  --link-external-color: #6cb4f5;
+  --link-external-color-hover: #9ccbf8;
+
+  --h1-color: #9cc3ee;
+  --h2-color: #74a9e0;
+  --h3-color: #a9c8ec;
+  --h4-color: #74a9e0;
+  --h5-color: #74a9e0;
+  --h6-color: #74a9e0;
+
+  --blockquote-color: var(--text-muted);
+  --blockquote-border-color: #605e5c;
+  --code-background: #2b2b2b;
+  --table-border-color: #605e5c;
+  --hr-color: #4d4b49;
+  --list-marker-color: var(--text-normal);
+}
+
+/* ---------- Style Settings options ---------- */
+
+.theme-light.onenote-chrome-slate { --one-chrome: #51555e; }
+.theme-dark.onenote-chrome-slate { --one-chrome: #2f3136; }
+
+.theme-light.onenote-chrome-neutral,
+.theme-dark.onenote-chrome-neutral {
+  --one-chrome: var(--background-secondary-alt);
+  --one-chrome-text: var(--text-normal);
+  --one-chrome-muted: var(--text-muted);
+  --one-chrome-hover: var(--one-page-hover);
+}
+
+/* Keep the OneNote Style plugin's purple bar in step with the chosen colour */
+body.onenote-chrome-slate,
+body.onenote-chrome-neutral {
+  --onenote-tabrow-bg: var(--one-chrome);
+  --onenote-tabrow-text: var(--one-chrome-text);
+}
+
+body.onenote-plain-headings {
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-normal);
+}
+
+/* Grey side panes, measured from OneNote for Windows (light mode only) */
+.theme-light.onenote-grey-panes {
+  --background-secondary: #bdbdbd;
+  --background-secondary-alt: #b3b3b3;
+}
+.theme-light.onenote-grey-panes .workspace-split.mod-sidedock,
+.theme-light.onenote-grey-panes .status-bar {
+  --background-modifier-border: #a8a8a8;
+  --background-modifier-hover: rgba(0, 0, 0, 0.08);
+  --nav-item-background-hover: rgba(0, 0, 0, 0.08);
+  --text-muted: #3e3e3e;
+  --text-faint: #5e5e5e;
+}
+
+/* ---------- Window chrome: one coloured row across the top ---------- */
+
+.theme-light,
+.theme-dark {
+  --titlebar-background: var(--one-chrome);
+  --titlebar-background-focused: var(--one-chrome);
+  --titlebar-text-color: var(--one-chrome-muted);
+  --titlebar-text-color-focused: var(--one-chrome-text);
+  --titlebar-border-color: var(--one-chrome);
+  --ribbon-background: var(--one-chrome);
+  --ribbon-background-collapsed: var(--one-chrome);
+  --tab-container-background: var(--one-chrome);
+  --tab-outline-color: var(--one-chrome);
+  --tab-background-active: var(--background-primary);
+  --tab-divider-color: transparent;
+  --status-bar-background: var(--background-secondary);
+  --status-bar-border-color: var(--background-modifier-border);
+}
+
+/* Icons and inactive tab titles on the coloured row and icon strip */
+.workspace-tab-header-container,
+.workspace-ribbon,
+.titlebar {
+  --icon-color: var(--one-chrome-muted);
+  --icon-color-hover: var(--one-chrome-text);
+  --icon-color-active: var(--one-chrome-text);
+  --icon-color-focused: var(--one-chrome-text);
+  --icon-opacity: 1;
+  --background-modifier-hover: var(--one-chrome-hover);
+  --tab-text-color: var(--one-chrome-muted);
+  --tab-text-color-focused: var(--one-chrome-muted);
+  --tab-text-color-focused-highlighted: var(--one-chrome-text);
+}
+
+/* The open tab is part of the page: page colours inside it */
+.workspace-tab-header.is-active {
+  --icon-color: var(--text-muted);
+  --icon-color-hover: var(--text-normal);
+  --background-modifier-hover: var(--one-page-hover);
+  --tab-text-color-active: var(--text-muted);
+  --tab-text-color-focused-active: var(--text-normal);
+  --tab-text-color-focused-active-current: var(--text-normal);
+}
+
+/* Sidebar tab icons sit on the coloured row: give the active one a light chip */
+.mod-sidedock .workspace-tab-header.is-active {
+  --icon-color: var(--one-chrome-text);
+  --tab-background-active: var(--one-chrome-hover);
+}
+
+.workspace-ribbon {
+  border-color: var(--one-chrome);
+}
+
+/* ---------- Pages ---------- */
+
+.inline-title {
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--background-modifier-border-hover);
+}
+
+/* File list: the open note is a white "page" with a coloured edge,
+   like the selected page in OneNote's page list */
+.nav-file-title.is-active {
+  --nav-item-background-active: var(--background-primary);
+  --nav-item-color-active: var(--text-normal);
+  box-shadow: inset 3px 0 0 var(--interactive-accent);
+}
