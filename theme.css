@@ -234,8 +234,20 @@ body.onenote-plain-headings {
   --background-modifier-border: #a8a8a8;
   --background-modifier-hover: rgba(0, 0, 0, 0.08);
   --nav-item-background-hover: rgba(0, 0, 0, 0.08);
-  --text-muted: #3e3e3e;
-  --text-faint: #5e5e5e;
+  --text-normal: #111111;
+  --text-muted: #262626;
+  --text-faint: #4a4a4a;
+  --nav-item-color: #161616;
+  --nav-collapse-icon-color: #333333;
+  --nav-collapse-icon-color-collapsed: #333333;
+  --nav-indentation-guide-color: rgba(0, 0, 0, 0.28);
+}
+
+/* Folder tree: file and folder names in the normal text colour, which reads
+   better than Obsidian's muted grey on OneNote's grey panes */
+.theme-light .workspace-split.mod-sidedock {
+  --nav-item-color: var(--text-normal);
+  --nav-collapse-icon-color: var(--text-muted);
 }
 
 /* ---------- Window chrome: one coloured row across the top ---------- */
