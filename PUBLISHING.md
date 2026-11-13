@@ -43,6 +43,8 @@ For the older pull-request route, this is the entry for `community-css-themes.js
 
 ## Rules the directory checks
 
+- The review scans the commit a release points to. `screenshot.png` must already be in the repository at that commit (release 1.0.1 failed for this reason on 2026-11-13; 1.0.2 fixed it).
+
 - The theme name can't change after submission. It must not contain "Obsidian" or "Theme".
 - `README.md`, `LICENSE`, `manifest.json` and the screenshot sit in the repository root. The screenshot should be 512 × 288 pixels.
 - No remote assets. Fonts and images must be bundled or local. This theme uses only installed fonts.
