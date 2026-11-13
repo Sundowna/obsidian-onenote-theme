@@ -1,8 +1,10 @@
 # OneNote Style
 
-An Obsidian theme with the look of Microsoft OneNote: a purple title row, white pages, light grey panes, Calibri text and OneNote's blue heading styles. Light and dark modes.
+**The look you already know, in Obsidian.** OneNote's purple title row, white pages, light grey panes, Calibri text and blue heading styles. Light and dark. Pick it under Appearance and you're done.
 
-![OneNote Style in light mode](screenshot.png)
+![OneNote Style in light mode](docs/light.png)
+
+![OneNote Style in dark mode](docs/dark.png)
 
 ## What it looks like
 
@@ -30,9 +32,19 @@ With the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) p
 
 Your accent colour and fonts under **Settings → Appearance** still apply on top of the theme.
 
-## Works well with the OneNote Style plugin
+## Part of a second brain
 
-The theme only changes how Obsidian looks. For OneNote's way of working, add the **OneNote Style** plugin. It adds the Home / Insert / View ribbon, notebook and section tabs, the page list, note tags, and ruled or grid pages. The theme keeps the plugin's top bar in the colour you pick.
+The theme only changes how Obsidian looks. It is one piece of a "second brain" built on Obsidian: your knowledge in plain Markdown that you own, with tools that feel like the ones you already use.
+
+| Piece | What it does |
+|---|---|
+| **OneNote Style theme** (this theme) | OneNote's look |
+| [**OneNote Style plugin**](https://github.com/Sundowna/obsidian-onenote-style) | The ribbon you already know: Office-style tabs, groups and buttons for any command, customised by right-click. Plus note tags and subpages |
+| [**AI ChatBridge**](https://github.com/Sundowna/obsidian-ai-chatbridge) | Brings your chats from Claude, ChatGPT, Gemini and others into the vault |
+
+Each works on its own. With the plugin, the theme colours the ribbon's tab row like the title row:
+
+![The theme together with the OneNote Style plugin](docs/with-plugin.png)
 
 ## Fonts
 
