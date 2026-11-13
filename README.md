@@ -48,11 +48,11 @@ Your accent colour and fonts under **Settings → Appearance** still apply on to
 
 This is one of three pieces of the **Sundowna Second Brain Suite (SSBS)**. Together they turn Obsidian into a second brain that feels like home: your knowledge in plain Markdown that you own, with tools that work like the ones you already use.
 
-| Piece | Kind | What it does |
-|---|---|---|
-| [**AI ChatBridge**](https://github.com/Sundowna/obsidian-ai-chatbridge) | Plugin | Brings your chats from Claude, ChatGPT, Gemini and others into the vault as Markdown |
-| [**OneNote Style**](https://github.com/Sundowna/obsidian-onenote-style) | Plugin | The ribbon you already know: Office-style tabs, groups and buttons for any command, plus note tags and subpages. Its **AI** group runs AI ChatBridge's sync commands with one click |
-| **OneNote Style theme** (you are here) | Theme | OneNote's look: white pages, Calibri, OneNote's heading styles, light and dark |
+| Piece | Kind | What it does | Get it |
+|---|---|---|---|
+| [**AI ChatBridge**](https://github.com/Sundowna/obsidian-ai-chatbridge) | Plugin | Brings your chats from Claude, ChatGPT, Gemini and others into the vault as Markdown | [Obsidian community](https://community.obsidian.md/plugins/ai-chatbridge) |
+| [**OneNote Style**](https://github.com/Sundowna/obsidian-onenote-style) | Plugin | The ribbon you already know: Office-style tabs, groups and buttons for any command, plus note tags and subpages. Its **AI** group runs AI ChatBridge's sync commands with one click | [Obsidian community](https://community.obsidian.md/plugins/onenote-style) |
+| **OneNote Style theme** (you are here) | Theme | OneNote's look: white pages, Calibri, OneNote's heading styles, light and dark | [Obsidian community](https://community.obsidian.md/themes/onenote-style) |
 
 Each works on its own. Together they are low friction from the first minute.
 
@@ -62,7 +62,7 @@ The theme uses **Calibri** for notes and **Segoe UI** for the interface. Both co
 
 ## Install
 
-**From Obsidian:** **Settings → Appearance → Themes → Manage**, search for **OneNote Style**, then **Install and use**.
+**From Obsidian:** **Settings → Appearance → Themes → Manage**, search for **OneNote Style**, then **Install and use**. Or open [the OneNote Style theme on the Obsidian community site](https://community.obsidian.md/themes/onenote-style).
 
 **By hand:**
 1. Create the folder `<your vault>/.obsidian/themes/OneNote Style/`.
