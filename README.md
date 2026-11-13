@@ -32,19 +32,17 @@ With the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) p
 
 Your accent colour and fonts under **Settings → Appearance** still apply on top of the theme.
 
-## Part of a second brain
+## Part of the Sundowna Second Brain Suite
 
-The theme only changes how Obsidian looks. It is one piece of a "second brain" built on Obsidian: your knowledge in plain Markdown that you own, with tools that feel like the ones you already use.
+This is one of three pieces of the **Sundowna Second Brain Suite (SSBS)**. Together they turn Obsidian into a second brain that feels like home: your knowledge in plain Markdown that you own, with tools that work like the ones you already use.
 
-| Piece | What it does |
-|---|---|
-| **OneNote Style theme** (this theme) | OneNote's look |
-| [**OneNote Style plugin**](https://github.com/Sundowna/obsidian-onenote-style) | The ribbon you already know: Office-style tabs, groups and buttons for any command, customised by right-click. Plus note tags and subpages |
-| [**AI ChatBridge**](https://github.com/Sundowna/obsidian-ai-chatbridge) | Brings your chats from Claude, ChatGPT, Gemini and others into the vault |
+| Piece | Kind | What it does |
+|---|---|---|
+| [**AI ChatBridge**](https://github.com/Sundowna/obsidian-ai-chatbridge) | Plugin | Brings your chats from Claude, ChatGPT, Gemini and others into the vault as Markdown |
+| [**OneNote Style**](https://github.com/Sundowna/obsidian-onenote-style) | Plugin | The ribbon you already know: Office-style tabs, groups and buttons for any command, plus note tags and subpages. Its **AI** group runs AI ChatBridge's sync commands with one click |
+| **OneNote Style theme** (you are here) | Theme | OneNote's look: white pages, Calibri, OneNote's heading styles, light and dark |
 
-Each works on its own. With the plugin, the theme colours the ribbon's tab row like the title row:
-
-![The theme together with the OneNote Style plugin](docs/with-plugin.png)
+Each works on its own. Together they are low friction from the first minute.
 
 ## Fonts
 
