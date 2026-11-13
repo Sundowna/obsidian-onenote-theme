@@ -6,11 +6,11 @@
 
 **With the [OneNote Style](https://github.com/Sundowna/obsidian-onenote-style) plugin's ribbon.** The theme colours the ribbon's tab row like the title row.
 
-![Light mode with the OneNote Style ribbon](docs/1-ribbon-light.png)
+![Dark mode with the OneNote Style ribbon](docs/1-ribbon-dark.png)
 
-![Dark mode with the OneNote Style ribbon](docs/2-ribbon-dark.png)
+![Dark mode with the ribbon's Insert tab](docs/2-ribbon-insert-dark.png)
 
-![Light mode with the ribbon's Insert tab](docs/3-ribbon-insert-light.png)
+![Light mode with the OneNote Style ribbon](docs/3-ribbon-light.png)
 
 **The theme on its own.**
 
