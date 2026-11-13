@@ -44,6 +44,10 @@ This is one of three pieces of the **Sundowna Second Brain Suite (SSBS)**. Toget
 
 Each works on its own. Together they are low friction from the first minute.
 
+With the OneNote Style plugin, the theme colours the ribbon's tab row like the title row:
+
+![The theme together with the OneNote Style plugin](docs/with-plugin.png)
+
 ## Fonts
 
 The theme uses **Calibri** for notes and **Segoe UI** for the interface. Both come with Windows and Microsoft Office. **Carlito** is a free font with the same measurements as Calibri. On a computer without these fonts, Obsidian's default fonts are used. The theme loads nothing from the internet.
