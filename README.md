@@ -1,6 +1,8 @@
 # OneNote Style
 
-**The look you already know, in Obsidian.** OneNote's purple title row, white pages, light grey panes, Calibri text and blue heading styles. Light and dark. Pick it under Appearance and you're done.
+**The look you already know, in your Obsidian vault.** OneNote Style gives Obsidian the look of **OneNote** - a **purple title row**, **white pages**, **light grey panes**, **Calibri** text and OneNote's blue **heading styles** - so your notes feel at home from the first minute. Pick it under Appearance and you're done. Light and dark modes come along too.
+
+**Part of the [Sundowna Second Brain Suite](#part-of-the-sundowna-second-brain-suite)** - an easy, low-friction second brain in Obsidian, in the spirit of [Karpathy's LLM wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f). The other pieces: [AI ChatBridge](https://github.com/Sundowna/obsidian-ai-chatbridge) (all your AI chats in your vault) and [OneNote Style](https://github.com/Sundowna/obsidian-onenote-style) (the ribbon you already know).
 
 ![OneNote Style in light mode](docs/light.png)
 
