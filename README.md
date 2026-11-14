@@ -51,7 +51,7 @@ This is one of three pieces of the **Sundowna Second Brain Suite (SSBS)**. Toget
 | Piece | Kind | What it does | Get it |
 |---|---|---|---|
 | [**AI ChatBridge**](https://github.com/Sundowna/obsidian-ai-chatbridge) | Plugin | Brings your chats from Claude, ChatGPT, Gemini and others into the vault as Markdown | [Obsidian community](https://community.obsidian.md/plugins/ai-chatbridge) |
-| [**OneNote Style**](https://github.com/Sundowna/obsidian-onenote-style) | Plugin | The ribbon you already know: Office-style tabs, groups and buttons for any command, plus note tags and subpages. Its **AI** group runs AI ChatBridge's sync commands with one click | [Obsidian community](https://community.obsidian.md/plugins/onenote-style) |
+| [**OneNote Style**](https://github.com/Sundowna/obsidian-onenote-style) | Plugin | The ribbon you already know: Office-style tabs, groups and buttons for any command, plus note tags, subpages and editing without Markdown syntax. Its **AI** group runs AI ChatBridge's sync commands with one click | [Obsidian community](https://community.obsidian.md/plugins/onenote-style) |
 | **OneNote Style theme** (you are here) | Theme | OneNote's look: white pages, Calibri, OneNote's heading styles, light and dark | [Obsidian community](https://community.obsidian.md/themes/onenote-style) |
 
 Each works on its own. Together they are low friction from the first minute.
